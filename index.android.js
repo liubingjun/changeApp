@@ -13,17 +13,22 @@ import {
   View
 } from 'react-native';
 var MOCKED_MOVIES_DATA = [
-  {title: '标题', year: '2015', posters: {thumbnail: 'http://i.imgur.com/UePbdph.jpg'}},
+  {title: '标题', year: '20181', posters: {thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'}},
 ];
 export default class changeApp extends Component {
  render() {
     var movie = MOCKED_MOVIES_DATA[0];
     return (
-      <View style={styles.container}>
-        <Text>{movie.title}</Text>
-        <Text>{movie.year}</Text>
-        <Image source={{uri: movie.posters.thumbnail}}
-          style={styles.thumbnail} />
+      // <View style={styles.container}>
+      //   <Text>{movie.title}</Text>
+      //   <Text>{movie.year}</Text>
+      //   <Image source={{uri: movie.posters.thumbnail}}
+      //     style={styles.thumbnail} />
+      // </View>
+      <View style={{flex: 1, flexDirection: 'column'}}>
+        <View style={{flex: 1, backgroundColor: 'powderblue'}} />
+        <View style={{flex: 2, backgroundColor: 'skyblue'}} />
+        <View style={{flex: 3, backgroundColor: 'steelblue'}} />
       </View>
     );
   }
